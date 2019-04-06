@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class HouseExterior : MonoBehaviour
 {
     public int IndexScene;
+    public string verb;
     public Text MessageDisplay;
 
     // bEHAVIOUR vARIABLE
@@ -16,7 +17,7 @@ public class HouseExterior : MonoBehaviour
     
     void Start()
     {
-        displayMessage("loool");
+        displayMessage("");
     }
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class HouseExterior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        displayMessage("Entered");
+        displayMessage("Press Q to " + verb);
         isInTriggerZone = true;
     }
 

@@ -112,6 +112,116 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &11392158
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2819142048993327843, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_Name
+      value: FPSController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048993158851, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048993158851, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048993158851, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048993158851, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048993158851, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048993158851, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048993158851, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048993158851, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048993158851, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048993158851, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048993158851, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142047983144196, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_Range
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048279023052, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048411705805, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_Name
+      value: MessageView
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048411705804, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048411705843, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8bbee5fde3e5b8344b87da8cf69b00a3,
+        type: 3}
+    - target: {fileID: 2819142048411705843, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048411705843, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819142048411705843, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18e99d5c1a47b7644a2c19eb738e8778, type: 3}
 --- !u!1001 &1055276979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,7 +310,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IndexScene: 0
-  MessageDisplay: {fileID: 0}
+  verb: leave
+  MessageDisplay: {fileID: 1117836655}
 --- !u!65 &1055276982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -214,6 +325,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7246113, y: 1.7101562, z: 2.2209635}
   m_Center: {x: 7.298731, y: 0.9884068, z: 4.88411}
+--- !u!114 &1117836655 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2819142048411705843, guid: 18e99d5c1a47b7644a2c19eb738e8778,
+    type: 3}
+  m_PrefabInstance: {fileID: 11392158}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1700137327
 GameObject:
   m_ObjectHideFlags: 0
