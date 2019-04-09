@@ -13,7 +13,10 @@ public class PlayerExtended : MonoBehaviour
 
     public GameObject Flashlight;
 
-    private bool isLight;
+    public Camera MainCamera;
+    public Camera AyuwokiCam;
+
+    public bool isLight;
 
     // State
     public List<CDBehaviour> collected;
@@ -27,6 +30,8 @@ public class PlayerExtended : MonoBehaviour
     {
         isLight = true;
         collected = new List<CDBehaviour>();
+        MainCamera.enabled = true;
+        AyuwokiCam.enabled = false;
 
     }
 
@@ -84,5 +89,12 @@ public class PlayerExtended : MonoBehaviour
     {
         GameData.AyuwokiPosition = AyuwokiPos.position;
         GameData.CollectedCDs = collected;
+    }
+
+    public void EndGame()
+    {
+        //this.transform.LookAt(AyuwokiPos);
+        MainCamera.enabled = false;
+        AyuwokiCam.enabled = true;
     }
 }
