@@ -656,4 +656,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b0a55ff9ef286f4cb591e33ad8aa2b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MessageDisplay: {fileID: 2819142048411705843}
   Flashlight: {fileID: 2819142047983144198}
