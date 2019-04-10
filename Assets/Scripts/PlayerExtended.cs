@@ -105,6 +105,11 @@ public class PlayerExtended : MonoBehaviour
     public void grabCD(CDBehaviour cd)
     {
         this.collected.Add(cd);
+        GameData.MarkAsUsed(cd.AlbumTitle);
+        foreach (KeyValuePair<string, bool> kvp in GameData.mapEnabled)
+        {
+            Debug.Log("Key = " + kvp.Key + " Value = " + kvp.Value.ToString());
+        }
         grabbedCDs++;
         UpdateGrabbedCDs();
         hideMessage();

@@ -41,14 +41,28 @@ public class GameLogicObj : MonoBehaviour
             spawnLocations.RemoveAt(r);
             Vector3 aVect = aux.gameObject.transform.position;
             GameData.CDPositions[i] = new Vector3(aVect.x, aVect.y, aVect.z);
+            string albumName = CDS[i].name;
+            GameData.mapEnabled.Add(albumName, true);
 
             Debug.Log("Pos: " + GameData.CDPositions[i]);
         }
     }
 
     void InstantiateCD(){
-        for(int i = 0; i < 4; i++){
-            Instantiate(CDS[i], GameData.CDPositions[i],  Quaternion.identity);
+        foreach (KeyValuePair<string, bool> kvp in GameData.mapEnabled)
+        {
+            Debug.Log("Key = " + kvp.Key + " Value = " + kvp.Value.ToString());
+        }
+        for (int i = 0; i < 4; i++){
+            if (GameData.mapEnabled[CDS[i].name])
+            {
+                Instantiate(CDS[i], GameData.CDPositions[i], Quaternion.identity);
+            }
+            else
+            {
+                Debug.Log("Ignored an Element: title: " + CDS[i].name);
+            }
+            
         }
     }
 }
