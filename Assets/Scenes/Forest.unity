@@ -1216,7 +1216,7 @@ PrefabInstance:
     - target: {fileID: 4403637236854070501, guid: aca8ae03bc29a994eac9e63b113a9eb0,
         type: 3}
       propertyPath: IndexScene
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4403637236854070501, guid: aca8ae03bc29a994eac9e63b113a9eb0,
         type: 3}
@@ -1594,7 +1594,7 @@ PrefabInstance:
     - target: {fileID: 4494148082793602505, guid: ff60837b78d493945ab203e77d6835fc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 107.2
+      value: 125.81
       objectReference: {fileID: 0}
     - target: {fileID: 4494148082793602505, guid: ff60837b78d493945ab203e77d6835fc,
         type: 3}
@@ -1604,7 +1604,7 @@ PrefabInstance:
     - target: {fileID: 4494148082793602505, guid: ff60837b78d493945ab203e77d6835fc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 203.9
+      value: 183.79
       objectReference: {fileID: 0}
     - target: {fileID: 4494148082793602505, guid: ff60837b78d493945ab203e77d6835fc,
         type: 3}

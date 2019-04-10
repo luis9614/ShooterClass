@@ -4,6 +4,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerExtended : MonoBehaviour
 {
@@ -80,7 +81,7 @@ public class PlayerExtended : MonoBehaviour
     }
 
     public void WinGame(){
-
+        SceneManager.LoadScene(4);
     }
 
     public void displayMessage(string msg)
@@ -118,5 +119,6 @@ public class PlayerExtended : MonoBehaviour
         //this.transform.LookAt(AyuwokiPos);
         MainCamera.enabled = false;
         AyuwokiCam.enabled = true;
+        SceneManager.LoadScene(3);
     }
 }

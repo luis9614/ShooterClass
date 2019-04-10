@@ -12,6 +12,8 @@ public class CDBehaviour : MonoBehaviour
     private Light cdLight;
     private PlayerExtended PlayerCtrl;
 
+    public bool isGrabbed;
+
 
     // Control Variables
     float lastStep, timeBetweenSteps = 0.5f;
@@ -21,18 +23,23 @@ public class CDBehaviour : MonoBehaviour
         isGrabbable = false;
         Player = GameObject.FindGameObjectsWithTag("Player")[0];
         PlayerCtrl = this.Player.GetComponent<PlayerExtended>() as PlayerExtended;
+        isGrabbed = false;
         //cdLight.color = Color.blue;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(isGrabbed){
+            this.enabled = false;
+        }
         if(isGrabbable && Input.GetKey(KeyCode.F))
         {
             if(Time.time - lastStep > timeBetweenSteps)
             {
                 lastStep = Time.time;
                 this.gameObject.active = false;
+                isGrabbed = true;
                 PlayerCtrl.grabCD(this);
             }
         }

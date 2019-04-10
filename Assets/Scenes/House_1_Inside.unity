@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec9df202f74f5841aa9b0e8755bc62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IndexScene: 0
+  IndexScene: 1
   verb: leave
   MessageDisplay: {fileID: 1117836655}
 --- !u!65 &1055276982

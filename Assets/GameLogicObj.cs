@@ -39,15 +39,16 @@ public class GameLogicObj : MonoBehaviour
             r = random.Next(0, listLength);
             GameObject aux = spawnLocations[r];
             spawnLocations.RemoveAt(r);
-            GameData.CDPositions[i] = aux.gameObject.transform;
+            Vector3 aVect = aux.gameObject.transform.position;
+            GameData.CDPositions[i] = new Vector3(aVect.x, aVect.y, aVect.z);
 
-            Debug.Log(GameData.CDPositions[i].position);
+            Debug.Log("Pos: " + GameData.CDPositions[i]);
         }
     }
 
     void InstantiateCD(){
         for(int i = 0; i < 4; i++){
-            Instantiate(CDS[i], GameData.CDPositions[i].position,  Quaternion.identity);
+            Instantiate(CDS[i], GameData.CDPositions[i],  Quaternion.identity);
         }
     }
 }
