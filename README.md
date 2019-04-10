@@ -8,8 +8,6 @@
 0186950
 April 2019
 
-![Kirby Jump Icon](Assets/Sprites/Icon_256.png)  
-
 ## Table of Contents  
 
 * [Concept](#concept)
@@ -56,19 +54,13 @@ Basic animations were used to represent mainly the Ayuwoki's state. He is always
 
 Sounds come primarily from two sources, in Ayuwoki's case sounds are played when he starts chasing the player or when he wins. The second source is embodied by the GameController (empty object) contains the ambient music for the game, which plays back in loop.
 
+The ayuwoki will also perform noises when he is close enough.
+
 ### Health System
 
-Kirby only has three lifes to get as far as he can. He may lose them by hitting clouds, and there's no chance of getting them back.
+The player only has one life to get as far as he can. As soon as the Ayuwoki gets close enough, the game is over.
 
-He may lose all of them when falling from a cloud and having nowhere to land to.
-
-### Prefabs
-
-The background elements and clouds are managed as prefabs, instantiating them when needed and dinamically according to the player's progress. Accounting for prefabs and their deletion was managed using lists as shown below. Keep memory usage low.
-
-```csharp
-    List<GameObject>
-```
+At the same time, each recovered album decrases the Ayuwoki's health considerably.
 
 ## Screenshots
 
@@ -76,14 +68,14 @@ Some images of the final game.
 
 ### Main Screen
 
-![Main Screen](Assets/Docs/mainScreen.png)
+![Main Screen](Assets/Docs/thriller.jpg)
 
 ### Main Game
 
-![Steady](Assets/Docs/gameSteady.png)
-![High](Assets/Docs/gameHigh.png)
-![Jumping](Assets/Docs/gameJumping.jpg)
+![Steady](Assets/Docs/Environment.png)
+![High](Assets/Docs/Escape.png)
+![Jumping](Assets/Docs/Find.jpg)
 
 ### Game Over
 
-![GameOver](Assets/Docs/gameOver.PNG)
+![GameOver](Assets/Docs/GameOver.PNG)
