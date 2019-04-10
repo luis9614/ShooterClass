@@ -9,6 +9,7 @@ public class PlayerExtended : MonoBehaviour
 {
     // Utils
     public Text MessageDisplay;
+    public Text CountDisplay;
     // Start is called before the first frame update
 
     public GameObject Flashlight;
@@ -17,6 +18,9 @@ public class PlayerExtended : MonoBehaviour
     public Camera AyuwokiCam;
 
     public bool isLight;
+
+    public int grabbedCDs = 0;
+    public int totalCDs = 4;
 
     // State
     public List<CDBehaviour> collected;
@@ -32,12 +36,16 @@ public class PlayerExtended : MonoBehaviour
         collected = new List<CDBehaviour>();
         MainCamera.enabled = true;
         AyuwokiCam.enabled = false;
+        UpdateGrabbedCDs();
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(grabbedCDs == totalCDs){
+            WinGame();
+        }
         if (Input.GetKey(KeyCode.E))
         {
             if (Time.time - lastStep > timeBetweenSteps)
@@ -62,6 +70,10 @@ public class PlayerExtended : MonoBehaviour
         }
     }
 
+    public void WinGame(){
+
+    }
+
     public void displayMessage(string msg)
     {
         MessageDisplay.text = msg;
@@ -72,12 +84,20 @@ public class PlayerExtended : MonoBehaviour
     {
         MessageDisplay.text = "";
     }
+    private void UpdateGrabbedCDs(){
+        CountDisplay.text = "Found " + grabbedCDs.ToString() + "/" + totalCDs.ToString() + "CD's";
+    }
 
     public void grabCD(CDBehaviour cd)
     {
         this.collected.Add(cd);
+        grabbedCDs++;
+        UpdateGrabbedCDs();
+        hideMessage();
         // save
         SaveGame();
+        Debug.Log("Ayuwoki Pos: " + GameData.AyuwokiPosition.ToString());
+        Debug.Log("Collected CDS: " + GameData.CollectedCDs.Count.ToString());
     }
 
     // Methods for Loading and saving game
