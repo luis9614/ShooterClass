@@ -32,10 +32,19 @@ public class PlayerExtended : MonoBehaviour
 
     void Start()
     {
-        isLight = true;
-        collected = new List<CDBehaviour>();
+        if(GameData.isNewGame){
+            isLight = true;
+            collected = new List<CDBehaviour>();
+            grabbedCDs = 0;
+        }else{
+            collected = GameData.CollectedCDs;
+            grabbedCDs = GameData.grabbedCDs;
+        }
+        
+        
         MainCamera.enabled = true;
         AyuwokiCam.enabled = false;
+        totalCDs = GameData.totalCDs;
         UpdateGrabbedCDs();
 
     }
@@ -85,9 +94,13 @@ public class PlayerExtended : MonoBehaviour
         MessageDisplay.text = "";
     }
     private void UpdateGrabbedCDs(){
-        CountDisplay.text = "Found " + grabbedCDs.ToString() + "/" + totalCDs.ToString() + "CD's";
+        CountDisplay.text = "Found " + grabbedCDs.ToString() + "/" + totalCDs.ToString() + " CD's";
     }
-
+    private void UpdateGameData(){
+        GameData.AyuwokiPosition = AyuwokiPos.position;
+        GameData.CollectedCDs = collected;
+        GameData.grabbedCDs = grabbedCDs;
+    }
     public void grabCD(CDBehaviour cd)
     {
         this.collected.Add(cd);
@@ -95,18 +108,9 @@ public class PlayerExtended : MonoBehaviour
         UpdateGrabbedCDs();
         hideMessage();
         // save
-        SaveGame();
+        UpdateGameData();
         Debug.Log("Ayuwoki Pos: " + GameData.AyuwokiPosition.ToString());
         Debug.Log("Collected CDS: " + GameData.CollectedCDs.Count.ToString());
-    }
-
-    // Methods for Loading and saving game
-
-
-    public void SaveGame()
-    {
-        GameData.AyuwokiPosition = AyuwokiPos.position;
-        GameData.CollectedCDs = collected;
     }
 
     public void EndGame()

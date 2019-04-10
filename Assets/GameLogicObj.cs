@@ -6,7 +6,6 @@ public class GameLogicObj : MonoBehaviour
 {
     public GameObject Player;
     public GameObject[] CDS = new GameObject[5];
-    private Transform[] CDPositions = new Transform[5];
     // Start is called before the first frame update
 
     private System.Random random;
@@ -19,8 +18,9 @@ public class GameLogicObj : MonoBehaviour
             spawnLocations = new List<GameObject>(GameObject.FindGameObjectsWithTag("Respawn"));
             AssignSpawnLocations();
             InstantiateCD();
+            GameData.isNewGame = false;
         }else{
-            //  LOAD
+            InstantiateCD();
         }
         
     }
@@ -39,15 +39,15 @@ public class GameLogicObj : MonoBehaviour
             r = random.Next(0, listLength);
             GameObject aux = spawnLocations[r];
             spawnLocations.RemoveAt(r);
-            CDPositions[i] = aux.gameObject.transform;
+            GameData.CDPositions[i] = aux.gameObject.transform;
 
-            Debug.Log(CDPositions[i].position);
+            Debug.Log(GameData.CDPositions[i].position);
         }
     }
 
     void InstantiateCD(){
         for(int i = 0; i < 4; i++){
-            Instantiate(CDS[i],CDPositions[i].position,  Quaternion.identity);
+            Instantiate(CDS[i], GameData.CDPositions[i].position,  Quaternion.identity);
         }
     }
 }
