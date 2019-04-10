@@ -124,6 +124,7 @@ public class PlayerExtended : MonoBehaviour
         //this.transform.LookAt(AyuwokiPos);
         MainCamera.enabled = false;
         AyuwokiCam.enabled = true;
+        GameData.ClearData();
         SceneManager.LoadScene(3);
     }
 }

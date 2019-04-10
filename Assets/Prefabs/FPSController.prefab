@@ -389,7 +389,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.8
+  m_Height: 2.3
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -658,6 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MessageDisplay: {fileID: 2819142048411705843}
+  CountDisplay: {fileID: 0}
   Flashlight: {fileID: 2819142047983144198}
   MainCamera: {fileID: 0}
   AyuwokiCam: {fileID: 0}
