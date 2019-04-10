@@ -74,8 +74,8 @@ Some images of the final game.
 
 ![Steady](Assets/Docs/Environment.png)
 ![High](Assets/Docs/Escape.png)
-![Jumping](Assets/Docs/Find.jpg)
+![Jumping](Assets/Docs/Find.png)
 
 ### Game Over
 
-![GameOver](Assets/Docs/GameOver.PNG)
+![GameOver](Assets/Docs/GameOver.png)
