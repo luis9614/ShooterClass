@@ -20,6 +20,7 @@ public class CDBehaviour : MonoBehaviour
     void Start()
     {
         cdLight = this.gameObject.GetComponentInChildren<Light>();
+        cdLight.enabled = false;
         isGrabbable = false;
         Player = GameObject.FindGameObjectsWithTag("Player")[0];
         PlayerCtrl = this.Player.GetComponent<PlayerExtended>() as PlayerExtended;
