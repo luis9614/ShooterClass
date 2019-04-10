@@ -19,6 +19,7 @@ public class CDBehaviour : MonoBehaviour
     {
         cdLight = this.gameObject.GetComponentInChildren<Light>();
         isGrabbable = false;
+        Player = GameObject.FindGameObjectsWithTag("Player")[0];
         PlayerCtrl = this.Player.GetComponent<PlayerExtended>() as PlayerExtended;
         //cdLight.color = Color.blue;
     }
