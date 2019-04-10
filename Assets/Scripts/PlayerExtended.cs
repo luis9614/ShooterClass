@@ -43,8 +43,6 @@ public class PlayerExtended : MonoBehaviour
             if (Time.time - lastStep > timeBetweenSteps)
             {
                 lastStep = Time.time;
-                //Do step
-                Debug.Log("Switched");
                 switchLight();
             }
             

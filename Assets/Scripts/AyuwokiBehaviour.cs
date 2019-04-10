@@ -11,6 +11,8 @@ public class AyuwokiBehaviour : MonoBehaviour
     private Animator AnimatorManager;
     private NavMeshAgent NavMeshAgent;
 
+    private AudioSource _source;
+
     public float MinDistance;
     public float MaxDistance;
 
@@ -23,6 +25,8 @@ public class AyuwokiBehaviour : MonoBehaviour
         AnimatorManager = this.GetComponent<Animator>() as Animator;
         NavMeshAgent = this.GetComponent<NavMeshAgent>() as NavMeshAgent;
         isChasing = false;
+        _source = this.GetComponent<AudioSource>() as AudioSource;
+        
     }
 
     // Update is called once per frame
@@ -34,12 +38,14 @@ public class AyuwokiBehaviour : MonoBehaviour
         {
             isChasing = true;
             AnimatorManager.SetBool("turnedLightOn", true);
+            _source.Play();
             Debug.Log("Changed animation to running");
         }
         else if (PlayerLogic.isLight)
         {
-            //this.transform.position += this.transform.forward * Speed * Time.deltaTime;
+            this.transform.position += this.transform.forward * Speed * Time.deltaTime;
             Vector3 dir = transform.position - Player.transform.position;
+            dir = Vector3.Normalize(dir);
             Vector3 newPos = transform.position - dir * Speed * Time.deltaTime;
             NavMeshAgent.Warp(newPos);
         }

@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  AlbumTitle: Thriller
+  isGrabbable: 0
 --- !u!65 &5170533050552161564
 BoxCollider:
   m_ObjectHideFlags: 0
